@@ -1,0 +1,54 @@
+```json
+{
+  "name": "nodoubt-estate",
+  "version": "1.0.0",
+  "description": "Crypto estate planning for the digital generation",
+  "main": "src/pages/index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0",
+    "coinbase-commerce-node": "^1.0.4",
+    "@anthropic-ai/sdk": "^0.20.0",
+    "pdf-lib": "^1.17.1",
+    "nodemailer": "^6.9.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  }
+}
+```
+
+## ⚙️ Vercel.json Configuration
+```json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/pages/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/src/pages/index.html"
+    },
+    {
+      "src": "/preview",
+      "dest": "/src/pages/preview.html"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
+}
+```

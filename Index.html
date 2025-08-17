@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoDoubtEstate - Death-Proof Your Digital Life | Crypto Estate Planning</title>
+    <meta name="description" content="Estate planning for the crypto generation. $32 flat fee. AI-powered wills with pet legacy protection. Blockchain notarization on Polygon.">
+    <meta name="keywords" content="estate planning, crypto wills, pet inheritance, blockchain notarization, digital estate">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="NoDoubtEstate - Crypto for your dog's future">
+    <meta property="og:description" content="Estate planning that doesn't suck. $32 flat fee. Pet legacy included.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nodoubtate.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NoDoubtEstate - Crypto Estate Planning">
+    <meta name="twitter:description" content="Death-proof your digital life. Crypto for your dog's future. $32 flat fee.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        }
+
+        .glitch {
+            position: relative;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 15px #00ffff;
+        }
+
+        /* Social Icons */
+        .social-icons a:hover {
+            color: #00ffff !important;
+            transform: scale(1.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 120px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 120px);
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff0080, #00ffff, #ff0080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero h2 {
+            font-size: clamp(24px, 4vw, 48px);
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .hero .pet-tagline {
+            font-size: clamp(18px, 3vw, 28px);
+            margin-bottom: 30px;
+            color: #ff0080;
+            text-shadow: 0 0 15px rgba(255, 0, 128, 0.5);
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #cccccc;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Pricing Card */
+        .price-card {
+            background: linear-gradient(135deg, rgba(255, 0, 128, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+            border: 2px solid #00ffff;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 400px;
+            margin: 0 auto 50px;
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .price {
+            font-size: 72px;
+            font-weight: 900;
+            color: #00ffff;
+            text-shadow: 0 0 20px #00ffff;
+            margin-bottom: 10px;
+        }
+
+        .price-subtitle {
+            font-size: 18px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .payment-btn {
+            padding: 15px 30px;
+            border: 2px solid;
+            border-radius: 10px;
+            background: transparent;
+            color: white;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .payment-btn.crypto {
+            border-color: #ff0080;
+            color: #ff0080;
+        }
+
+        .payment-btn.stripe {
+            border-color: #00ffff;
+            color: #00ffff;
+        }
+
+        .payment-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px currentColor;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 80px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+            color: #00ffff;
+            text-shadow: 0 0 15px #00ffff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ffff;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 80px 0;
+        }
+
+        .process h2 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+            color: #ff0080;
+            text-shadow: 0 0 15px #ff0080;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff0080, #00ffff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 900;
+            margin: 0 auto 20px;
+            color: #000;
+        }
+
+        .step h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .step p {
+            color: #cccccc;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(255, 0, 128, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+            text-align: center;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(45deg, #ff0080, #00ffff);
+            color: #000;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 24px;
+            text-transform: uppercase;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .payment-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+
+        /* Animated background elements */
+        .bg-element {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .bg-element:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            background: #00ffff;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bg-element:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            background: #ff0080;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .bg-element:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            background: #00ffff;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+    </style>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <div class="bg-element"></div>
+    <div class="bg-element"></div>
+    <div class="bg-element"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">NoDoubtEstate</div>
+                <div class="social-icons">
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 20px; margin: 0 8px; transition: color 0.3s;">𝕏</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 20px; margin: 0 8px; transition: color 0.3s;">📘</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 20px; margin: 0 8px; transition: color 0.3s;">📷</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 20px; margin: 0 8px; transition: color 0.3s;">🎵</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 20px; margin: 0 8px; transition: color 0.3s;">💼</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="glitch">NO DOUBT</h1>
+            <h2>ESTATE PLANNING</h2>
+            <div class="pet-tagline">🐾 Crypto for your dog's future 🐾</div>
+            <p>Stop procrastinating your mortality. Blockchain-verified, AI-powered estate planning that doesn't suck. <strong>Yes, even for your fur babies.</strong></p>
+            
+            <div class="price-card">
+                <div class="price">$32</div>
+                <div class="price-subtitle">Complete will + tax</div>
+                <div style="font-size: 16px; color: #00ffff; margin-bottom: 15px; font-weight: bold;">
+                    One flat fee. No hidden costs.
+                </div>
+                
+                <div style="margin: 20px 0; padding: 15px; background: rgba(0,255,255,0.1); border-radius: 10px; font-size: 14px;">
+                    💰 <strong>Basic Will</strong> - $32 + tax<br>
+                    <span style="font-size: 12px;">🔗 <strong>+ Peace of Mind Upgrade</strong> - Add $8 for Polygon blockchain lock</span><br>
+                    ✨ <strong>Preview Securely</strong> - Watermarks protect your draft until purchase<br>
+                    🐾 <strong>Pet Legacy Included</strong> - Upload photos, designate caregivers, set care budgets
+                </div>
+                
+                <div class="payment-options">
+                    <button class="payment-btn crypto" onclick="handlePayment('crypto')">PAY CRYPTO</button>
+                    <button class="payment-btn stripe" onclick="handlePayment('stripe')">CARD/STRIPE</button>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 12px; background: linear-gradient(45deg, rgba(255, 0, 128, 0.2), rgba(0, 255, 255, 0.2)); border: 1px solid #00ffff; border-radius: 10px; font-size: 14px; font-weight: bold; color: #00ffff;">
+                    🛡️ We never keep your data. You own it, 100%.
+                </div>
+                
+                <div style="font-size: 12px; color: #888; margin-top: 15px;">
+                    📧 Instant encrypted ZIP delivery by email • Nothing stored on our servers
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why We're Different</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🐾</span>
+                    <h3>Pet Legacy Protection</h3>
+                    <p>Your fur babies deserve a future too. Upload pet photos, designate caregivers, and set care budgets. Don't let Mr. Whiskers end up homeless.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💀</span>
+                    <h3>Death-Proof Your Crypto</h3>
+                    <p>Secure wallet recovery and transfer protocols. Your Bitcoin won't die with you.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <h3>AI Legal Assistant</h3>
+                    <p>Get personalized legal advice without paying lawyer prices. Not a lawyer, but smarter forms built from real legal templates.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">⛓️</span>
+                    <h3>Peace of Mind Upgrade</h3>
+                    <p>Lock your will permanently on Polygon for $8. Tamper-proof and globally verifiable forever.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Mobile-First</h3>
+                    <p>Complete your entire estate plan on your phone in under 30 minutes. No lawyers' offices required.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">👁️</span>
+                    <h3>Preview Before Paying</h3>
+                    <p>See your complete will with watermarks. No surprises, no regrets. Pay only when you're 100% satisfied.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2>Level Up Your Adulting</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Connect Wallet</h3>
+                    <p>Link your crypto wallets and accounts. Our AI scans your digital assets automatically.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Interview & Pet Setup</h3>
+                    <p>Answer smart questions. Upload pet photos, add vet contacts, set care budgets. Get watermarked preview to review.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Pay & Optional Blockchain</h3>
+                    <p>Pay $32 for your will, or add $8 for blockchain notarization on Polygon. Your choice.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Premium Delivery</h3>
+                    <p>Clean, professional documents delivered instantly via encrypted zip. No data stored on our servers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2 style="margin-bottom: 30px; font-size: 36px;">Ready to Protect Your Pack?</h2>
+            
+            <!-- Trust Signals -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 8px; color: #888; font-size: 14px;">
+                    <span style="font-size: 20px;">⬟</span> Polygon
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; color: #888; font-size: 14px;">
+                    <span style="font-size: 20px;">💳</span> Stripe
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; color: #888; font-size: 14px;">
+                    <span style="font-size: 20px;">Ξ</span> Ethereum
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; color: #888; font-size: 14px;">
+                    <span style="font-size: 20px;">💰</span> USDC
+                </div>
+            </div>
+            
+            <p style="margin-bottom: 40px; font-size: 18px; color: #ccc;">Join thousands of pet parents who've secured their fur babies' futures.</p>
+            <a href="/preview" class="cta-btn" onclick="startWillCreation()">Preview Free - Start $32</a>
+            <div style="margin-top: 20px; font-size: 14px; color: #888;">
+                ⚡ 30-minute setup • 🔒 Optional blockchain • 🤖 AI powered
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <!-- Rotating Testimonial -->
+            <div style="margin-bottom: 20px; padding: 15px; background: rgba(0,255,255,0.05); border-radius: 10px; font-style: italic; color: #00ffff;">
+                "Finally set up care for my 3 cats with crypto. My anxiety is gone!" - Luna, 23
+            </div>
+            
+            <!-- Social Media Links -->
+            <div style="margin-bottom: 20px;">
+                <div style="margin-bottom: 10px; color: #888; font-size: 14px;">Follow us:</div>
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 24px; transition: all 0.3s;" onmouseover="this.style.color='#00ffff'; this.style.transform='scale(1.2)'" onmouseout="this.style.color='#888'; this.style.transform='scale(1)'">𝕏</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 24px; transition: all 0.3s;" onmouseover="this.style.color='#00ffff'; this.style.transform='scale(1.2)'" onmouseout="this.style.color='#888'; this.style.transform='scale(1)'">📘</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 24px; transition: all 0.3s;" onmouseover="this.style.color='#00ffff'; this.style.transform='scale(1.2)'" onmouseout="this.style.color='#888'; this.style.transform='scale(1)'">📷</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 24px; transition: all 0.3s;" onmouseover="this.style.color='#00ffff'; this.style.transform='scale(1.2)'" onmouseout="this.style.color='#888'; this.style.transform='scale(1)'">🎵</a>
+                    <a href="#" style="color: #888; text-decoration: none; font-size: 24px; transition: all 0.3s;" onmouseover="this.style.

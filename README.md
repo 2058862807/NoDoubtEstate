@@ -16,4 +16,12 @@ Entry-level ebook-style estate planning with crypto and pet options.
 
 ## Environment Variables
 
-### Frontend (on Vercel)
+| Variable | Usage | Environment |
+| --- | --- | --- |
+| `EMAIL_SMTP_HOST` | Outgoing email server for sending messages | Backend |
+| `EMAIL_IMAP_HOST` | Incoming email server for monitoring replies | Backend |
+| `EMAIL_ADDRESS` | Email account used by the service | Backend |
+| `EMAIL_PASSWORD` | Password or app password for `EMAIL_ADDRESS` | Backend |
+| `OPENAI_API_KEY` | Access key for OpenAI-powered features | Backend |
+| `GITHUB_TOKEN` | GitHub access for automation scripts | Backend |
+| `VERCEL_TOKEN` | Deploy frontend to Vercel | Frontend |
